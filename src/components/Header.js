@@ -1,13 +1,13 @@
 import React from 'react';
 import NavBar from './NavBar';
+import CartWidget from './CartWidget';
 
-function Header(prop) {
-    let nombreCompleto = prop.nombre + " " + prop.apellido
+function Header() {
     return (
         <header id='main-header' className="header"> 
             <h1> E-Shop </h1>
-            <p>Bienvenido {nombreCompleto} </p>
             <NavBar/>
+            <CartWidget/>
         </header>
     )
 }

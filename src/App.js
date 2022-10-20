@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from './Header';
-import Main from './Main';
-import Footer from './Footer';
+import Header from './components/Header';
+import Main from './components/ItemListContainer';
+import Footer from './components/Footer';
 
 function App() {
     return (
         <>
-            <Header nombre= "Facundo" apellido= "Bravo"/> 
-            <Main/>
+            <Header/> 
+            <Main nombre= "Facundo" apellido= "Bravo"/>
             <Footer/>
             
 
