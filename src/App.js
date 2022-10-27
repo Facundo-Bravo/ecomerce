@@ -1,13 +1,15 @@
 import React from 'react';
-import Header from './components/Header';
-import Main from './components/ItemListContainer';
 import Footer from './components/Footer';
+import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
     return (
-        <>
-            <Header/> 
-            <Main nombre= "Facundo" apellido= "Bravo"/>
+        <> 
+            <NavBar/>
+            <main>
+                <ItemListContainer greeting={"Bienvenido"} />
+            </main> 
             <Footer/>
             
 

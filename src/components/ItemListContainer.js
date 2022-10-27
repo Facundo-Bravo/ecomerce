@@ -1,13 +1,11 @@
 import React from 'react';
-import {Button} from 'react-bootstrap';
 
-function Main(prop) {
-    let nombreCompleto = prop.nombre + " " + prop.apellido
-    return (
-        <main> 
-            <p>Bienvenido {nombreCompleto} </p>
-            <Button>click</Button>
-        </main> 
-    )
+function ItemListContainer(props) {
+  return (
+    <>
+      <p>{props.greeting} </p>
+    </>
+  )
 }
-export default Main
+
+export default ItemListContainer

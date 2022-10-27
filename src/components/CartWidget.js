@@ -1,11 +1,13 @@
 import React from 'react';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Button from '@mui/material/Button';
 
-const Icon = () => {
-    return(
-        <span className="material-icon">
-            delete
-        </span>
-    )
+const CartWidget = () => {
+  return (
+    <Button variant="Outlined" endIcon={<ShoppingCartIcon />}>
+      Cart
+    </Button>
+  )
 }
 
-export default Icon
+export default CartWidget

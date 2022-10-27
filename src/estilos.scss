@@ -1,4 +1,4 @@
-@import url( 'https://fonts.googleapis.com/icon?family=Material+Icons' );
+
 
 
 $color-primary: rgb(202, 61, 61);
@@ -17,6 +17,9 @@ html , body , #root {
     display: flex;
     flex-direction: column;
 }
+.navbar{
+    background-color: $color-primary;
+}
 
 main{
     flex-grow: 1;
@@ -29,12 +32,3 @@ footer{
     padding: 1rem;
 }
 
-#main-header{
-    background-color: $color-primary;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    
-}
