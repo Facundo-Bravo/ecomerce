@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import CartWidget from './CartWidget';
+import { Link } from "react-router-dom";
 
 const pages = ['Guitarras', 'Bajos', 'Baterias'];
 const settings = ['Perfil', 'Mis Compras', 'Logout'];
@@ -41,23 +42,24 @@ function NavBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Music Shop
-          </Typography>
+          <Link to="/">
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              sx={{
+                mr: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              Music Shop
+            </Typography>
+          </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -90,7 +92,9 @@ function NavBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Link to= {`/category/${page}`}> 
+                    <Typography textAlign="center">{page}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -116,15 +120,17 @@ function NavBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
+              <Link to={`/category/${page}`} > <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
               </Button>
+              </Link>
             ))}
           </Box>
+        
 
           <CartWidget />
           <Box sx={{ flexGrow: 0 }}>
